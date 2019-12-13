@@ -15,4 +15,4 @@ with open("./BlockDestination.txt", "wb") as blob_downlaod_client:
     blob_data.readinto(my_blob)
 
 blob_upload_client = blob_service_client.get_blob_client(container=container_name, blob=target_file_name)
-blob_client.upload_blob("./BlockDestination.txt", overwrite=True)
+blob_upload_client.upload_blob("./BlockDestination.txt", overwrite=True)
