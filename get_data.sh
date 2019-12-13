@@ -62,4 +62,4 @@ conda env create -q --file=envs/code.yml
 echo "activate code"
 conda activate code
 
-python3 code/getdata.py
+python3 datapipe/getdata.py
