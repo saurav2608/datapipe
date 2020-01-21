@@ -16,4 +16,4 @@ response = requests.get(csv_url)
 with open('./data.csv', 'wb') as f:
     f.write(response.content)
 with open('./data.csv', "rb") as data:
-    blob_client.upload_blob(data)
+    blob_client.upload_blob(data, overwrite=True)
