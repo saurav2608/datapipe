@@ -15,5 +15,5 @@ blob_client = blob_service_client.get_blob_client(container=container_name, blob
 response = requests.get(csv_url)
 with open('./data.csv', 'wb') as f:
     f.write(response.content)
-blob_client.upload_blob('./data.csv', overwrite=True)
-
+with open('./data.csv', "rb") as data:
+    blob_client.upload_blob(data)
